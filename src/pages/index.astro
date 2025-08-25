@@ -1,0 +1,425 @@
+---
+import "../styles/global.css";
+import SliderComponet from "../components/SliderComponet.astro";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coodii - Desarrollo de Software Profesional</title>   
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white">
+    <!-- Header -->
+    <header class="relative overflow-hidden border-b border-slate-800/50">
+        <nav class="max-w-6xl mx-auto px-6 lg:px-8 py-6 flex justify-between items-center relative z-10">
+            <div class="flex gap-2 justify-center items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"  viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><path stroke-width="2" d="M8 12h.009m3.986 0h.01m3.986 0H16"/><path stroke-width="1.5" d="M18 21c1.232 0 2.231-1.151 2.231-2.571c0-2.248-.1-3.743 1.442-5.52c.436-.502.436-1.316 0-1.818c-1.542-1.777-1.442-3.272-1.442-5.52C20.231 4.151 19.232 3 18 3M6 21c-1.232 0-2.231-1.151-2.231-2.571c0-2.248.1-3.743-1.442-5.52c-.436-.502-.436-1.316 0-1.818C3.835 9.352 3.769 7.84 3.769 5.57C3.769 4.151 4.768 3 6 3"/></g></svg>
+				<div class=" text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+					coodii
+				</div>
+			</div>
+			
+            <div class="hidden md:flex space-x-8">
+                <a href="#servicios" class="text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium hover:scale-105">
+                    Servicios
+                </a>
+                <a href="#nosotros" class="text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium hover:scale-105">
+                    Nosotros
+                </a>
+                <a href="#contacto" class="text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium hover:scale-105">
+                    Contacto
+                </a>
+            </div>
+            <button class="flex gap-2 justify-center items-center cursor-pointer bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 hover:from-cyan-600 hover:via-blue-600 hover:to-purple-700 text-white border-0 shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 px-4 py-2 rounded-md font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h10V4zm0 6v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"/></svg>
+				<p class="hidden md:flex">Calcular presupuesto </p>
+				
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-6 lg:px-8 py-24 text-center relative">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-delay-1000"></div>
+
+            <div class="relative z-10 max-w-4xl mx-auto flex flex-col gap-1 justify-center items-center">
+                <div class="inline-flex mb-5 items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium ">
+                    <svg class="lucide w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                    </svg>
+                    Desarrollo de Software Profesional
+                </div>
+
+                <h1 class="text-2xl m-0 p-0 md:text-6xl lg:text-7xl font-bold flex flex-col justify-center items-center gap-1 text-white">
+                    Somos tu aliado en:
+                    <span class="flex h-33 sm:h-18 -mt-1 text-6xl bg-gradient-to-r  from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent ">
+                        Soluciones Digitales
+                    </span>
+                </h1>
+                <p class="text-md md:text-2xl mt-3 text-slate-300  max-w-3xl mx-auto leading-relaxed">
+                    Desarrollo a medida • Automatización inteligente • Integración de IA
+                </p>
+				<SliderComponet/>
+                
+               
+            </div>
+        </section>
+    </header>
+
+    <!-- Stats Section - New -->
+    <section class="py-20 bg-slate-900/50 backdrop-blur-sm border-y border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                        50+
+                    </div>
+                    <p class="text-slate-400 font-medium">Proyectos Completados</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mb-2">
+                        98%
+                    </div>
+                    <p class="text-slate-400 font-medium">Satisfacción Cliente</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
+                        5+
+                    </div>
+                    <p class="text-slate-400 font-medium">Años Experiencia</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">
+                        24/7
+                    </div>
+                    <p class="text-slate-400 font-medium">Soporte Técnico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="pt-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="text-center flex flex-col justify-center items-center gap-2">
+                <div class="inline-flex items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium ">
+                    <svg class="lucide w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                    Nuestros Servicios
+                </div>
+                <h2 class="text-4xl flex flex-col md:flex-row md:h-18 w-full justify-center items-center gap-2 md:text-6xl font-bold  text-white">
+                    Soluciones
+                    <span class="bg-gradient-to-r h-12  md:h-auto  from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent block">
+                        Tecnológicas
+                    </span>
+                </h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed ">
+                    Desarrollamos software personalizado que impulsa el crecimiento de tu negocio con tecnología de vanguardia
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-4 max-w-7xl mx-auto mt-5">
+                <div class="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-teal-500/30 hover:border-teal-400/60 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-3 group rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex gap-2 bg-slate-950/30 rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2  bg-gradient-to-r from-teal-500 to-cyan-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m8 18l-6-6l6-6l1.425 1.425l-4.6 4.6L9.4 16.6zm8 0l-1.425-1.425l4.6-4.6L14.6 7.4L16 6l6 6z"/></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Desarrollo a Medida</h3>
+						</header>
+                        <main class="flex flex-col w-full h-full justify-between items-center">
+							<p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-left text-md  ">
+								Creamos software personalizado que se adapta perfectamente a los procesos únicos de tu negocio,
+								optimizando cada aspecto operativo
+							</p>
+							<div class="space-y-5 py-6">
+								<div class="flex items-center text-slate-300 justify-start">
+									<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+									</svg>
+									<span>Aplicaciones Web Modernas</span>
+								</div>
+								<div class="flex items-center text-slate-300 justify-start">
+									<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+									</svg>
+									<span>Sistemas de Gestión ERP</span>
+								</div>
+								<div class="flex items-center text-slate-300 justify-start">
+									<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+									</svg>
+									<span>APIs y Microservicios</span>
+								</div>
+							</div>
+							<button class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white border-0 transition-all duration-300 py-3 text-lg rounded-md font-medium">
+								Más Información
+							</button>
+						</main>
+                       
+                    </div>
+                </div>
+				   <div class="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-teal-500/30 hover:border-teal-400/60 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-3 group rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex gap-2 bg-slate-950/30 rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2  bg-gradient-to-r from-teal-500 to-cyan-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m17.502 12.033l-4.241-2.458l2.138-5.131A1.003 1.003 0 0 0 14.505 3a1 1 0 0 0-.622.214l-.07.06l-7.5 7.1a1.002 1.002 0 0 0 .185 1.592l4.242 2.46l-2.163 5.19a.999.999 0 0 0 1.611 1.11l7.5-7.102a1.002 1.002 0 0 0-.186-1.591"/></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Automatización Inteligente</h3>
+						</header>
+						<main class="flex flex-col w-full h-full justify-between items-center">
+							   <p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-left text-md  ">
+									Optimizamos y automatizamos procesos empresariales para maximizar la eficiencia y reducir costos
+									operativos
+								</p>
+								<div class="space-y-5 py-6">
+									<div class="flex items-center text-slate-300 justify-start">
+										<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+										</svg>
+										<span>Flujos de Trabajo Automáticos</span>
+									</div>
+									<div class="flex items-center text-slate-300 justify-start">
+										<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+										</svg>
+										<span>Integración de Sistemas</span>
+									</div>
+									<div class="flex items-center text-slate-300 justify-start">
+										<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+										</svg>
+										<span>Reportes en Tiempo Real</span>
+									</div>
+								</div>
+								<button class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white border-0 transition-all duration-300 py-3 text-lg rounded-md font-medium">
+									Más Información
+								</button>
+						</main>
+                        
+                     
+                    </div>
+                </div>
+				   <div class="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-teal-500/30 hover:border-teal-400/60 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-3 group rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex gap-2 bg-slate-950/30 rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2  bg-gradient-to-r from-teal-500 to-cyan-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4.5a3 3 0 0 0-2.567 4.554a3.001 3.001 0 0 0 0 5.893M7 4.5a2.5 2.5 0 0 1 5 0v15a2.5 2.5 0 0 1-5 0a3 3 0 0 1-2.567-4.553M7 4.5c0 .818.393 1.544 1 2m-3.567 8.447A3 3 0 0 1 6 13.67m13.25-8.92L17 7h-2m3.5-2.25a.75.75 0 1 0 1.5 0a.75.75 0 0 0-1.5 0m.75 14.5L17 17h-2m3.5 2.25a.75.75 0 1 1 1.5 0a.75.75 0 0 1-1.5 0m.75-7.25H15m3.5 0a.75.75 0 1 0 1.5 0a.75.75 0 0 0-1.5 0"/></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Inteligencia Artificial</h3>
+						</header>
+						<main class="flex flex-col w-full h-full justify-between items-center">
+							    <p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-left text-md  ">
+									Implementamos soluciones de IA avanzada para análisis predictivo y automatización inteligente de
+									próxima generación
+								</p>
+								<div class="space-y-5 py-6">
+									<div class="flex items-center text-slate-300 justify-start">
+										<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+										</svg>
+										<span>Machine Learning Personalizado</span>
+									</div>
+									<div class="flex items-center text-slate-300 justify-start">
+										<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+										</svg>
+										<span>Análisis Predictivo de Datos</span>
+									</div>
+									<div class="flex items-center text-slate-300 justify-start">
+										<svg class="lucide w-5 h-5 text-teal-400 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+										</svg>
+										<span>Asistentes Virtuales IA</span>
+									</div>
+								</div>
+								<button class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white border-0 transition-all duration-300 py-3 text-lg rounded-md font-medium">
+									Más Información
+								</button>
+						</main>
+                        
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Why Choose Us - Enhanced -->
+    <section id="nosotros" class="py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="text-center flex flex-col justify-center items-center gap-2">
+                <div class="inline-flex items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm border border-emerald-500/30 rounded-full text-emerald-400 text-sm font-medium ">
+                    <svg class="lucide w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                    </svg>
+                    Por Qué Elegirnos
+                </div>
+                <h2 class="text-4xl flex flex-col md:flex-row md:h-18 w-full justify-center items-center gap-2 md:text-6xl font-bold  text-white">
+                    La Diferencia
+                    <span class="bg-gradient-to-r h-12 md:h-auto from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent block">
+                        Coodii
+                    </span>
+                </h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                    Experiencia, innovación y compromiso con la excelencia en cada proyecto
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-5">
+				<div class="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/10 group text-center p-8 rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex flex-col gap-2  rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2  bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm6-5q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z"/></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Seguridad</h3>
+						</header>
+						<p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-center text-sm  ">
+							Código seguro y protección de datos garantizada
+						</p>
+						
+                    </div>
+                </div>
+				<div class="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-slate-700/50 hover:border-purple-400/50 transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/10 group text-center p-8 rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex flex-col gap-2  rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2   bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Puntualidad</h3>
+						</header>
+						<p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-center text-sm  ">
+							Entregamos en tiempo y forma, siempre
+						</p>
+						
+                    </div>
+                </div>
+				<div class="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-slate-700/50 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-xl hover:shadow-emerald-500/10 group text-center p-8 rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex flex-col gap-2  rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2    bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3zM7 16.5l-4.74-2.85M7 16.5l5-3m-5 3v5.17m5-8.17V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5zm5 3l-5-3m5 3l4.74-2.85M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3l5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0zM12 8L7.26 5.15M12 8l4.74-2.85M12 13.5V8"/></g></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Escalabilidad</h3>
+						</header>
+						<p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-center text-sm  ">
+							Soluciones que crecen con tu negocio
+						</p>
+						
+                    </div>
+                </div>
+				<div class="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-slate-700/50 hover:border-orange-400/50 transition-all duration-500 hover:shadow-xl hover:shadow-orange-500/10 group text-center p-8 rounded-xl">
+                    <div class=" text-center h-full flex flex-col">
+						<header class="flex flex-col gap-2  rounded-t-xl px-4 justify-center items-center w-full py-3">
+							<div class="p-2   bg-gradient-to-r from-orange-500 to-red-600 rounded-3xl flex items-center justify-center   group-hover:scale-110 transition-transform duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 21v-2h8v-7.1q0-2.925-2.037-4.962T12 4.9T7.038 6.938T5 11.9V18H4q-.825 0-1.412-.587T2 16v-2q0-.525.263-.987T3 12.275l.075-1.325q.2-1.7.988-3.15t1.975-2.525T8.762 3.6T12 3t3.225.6t2.725 1.663t1.975 2.512t1 3.15l.075 1.3q.475.225.738.675t.262.95v2.3q0 .5-.262.95t-.738.675V19q0 .825-.587 1.413T19 21zm-2-7q-.425 0-.712-.288T8 13t.288-.712T9 12t.713.288T10 13t-.288.713T9 14m6 0q-.425 0-.712-.288T14 13t.288-.712T15 12t.713.288T16 13t-.288.713T15 14m-8.975-1.55Q5.85 9.8 7.625 7.9T12.05 6q2.225 0 3.913 1.412T18 11.026Q15.725 11 13.813 9.8t-2.938-3.25q-.4 2-1.687 3.563T6.025 12.45"/></svg>
+							</div>
+							<h3 class="text-xl font-bold  text-white">Soporte 24/7</h3>
+						</header>
+						<p class="text-slate-300 leading-loose py-2 px-4  max-w-prose text-center text-sm  ">
+							Asistencia técnica cuando la necesites
+						</p>
+						
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- Footer - Enhanced -->
+    <footer id="contacto" class="bg-slate-950/90 backdrop-blur-sm py-20 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <div class="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-8">
+                        coodii
+                    </div>
+                     <h1 class="text-lg m-0 p-0 font-bold flex flex-col lg:flex-row  justify-start items-start lg:items-center gap-1 text-white">
+						Tu aliado en
+						<span class="flex lg:ml-1 text-lg bg-gradient-to-r  from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent ">
+							 Soluciones Digitales
+						</span>
+					</h1>
+                  
+                </div>
+
+                <div>
+				<h4 class="text-lg font-bold mb-8 text-white">Servicios</h4>
+				<ul class="space-y-4 text-slate-400">
+					<li>
+					<span class="font-semibold hover:text-cyan-400 transition-colors">Desarrollo de Aplicaciones</span>
+					<ul class="ml-6 mt-2 space-y-2 list-disc list-inside">
+						<li class="hover:text-cyan-400 transition-colors ">Web</li>
+						<li class="hover:text-cyan-400 transition-colors ">Escritorio</li>
+						<li class="hover:text-cyan-400 transition-colors">Móviles</li>
+					</ul>
+					</li>
+					<li class="hover:text-cyan-400 transition-colors">Automatización de Procesos</li>
+					<li class="hover:text-cyan-400 transition-colors">Soluciones con Inteligencia Artificial</li>
+				</ul>
+				</div>
+
+
+                <div>
+                    <h4 class="text-lg font-bold mb-8 text-white">Contacto</h4>
+                    <div class="space-y-6 text-slate-400">
+                        <div class="hover:text-cyan-400 transition-colors">
+                            <p class="font-medium">Email</p>
+                            <p>info@coodii.com</p>
+                        </div>
+                        <div class="hover:text-cyan-400 transition-colors">
+                            <p class="font-medium">Teléfono</p>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <button class="flex gap-2 cursor-pointer justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white border-0 shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 px-6 py-3 rounded-md font-medium w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+							Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-400">
+                <p>@coodii</p>
+                <div class="flex space-x-2 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-cyan-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-cyan-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-cyan-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><g fill="none"><g clip-path="url(#SVGG1Ot4cAD)"><path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"/></g><defs><clipPath id="SVGG1Ot4cAD"><path fill="#fff" d="M0 0h14v14H0z"/></clipPath></defs></g></svg>
+                    </a>
+					<a href="#" class="hover:text-cyan-400 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M5.086 4.28c1.65-1.76 4.031-2.78 6.93-2.78c4.792 0 8.017 2.784 9.033 6.65a1.5 1.5 0 0 1-2.902.762C17.48 6.37 15.45 4.5 12.017 4.5c-2.164 0-3.72.742-4.742 1.832C6.239 7.438 5.64 9.02 5.64 10.875v2.25c0 1.855.598 3.437 1.634 4.543c1.022 1.09 2.578 1.832 4.741 1.832c1.576 0 2.795-.365 3.714-.93c.92-.568 1.42-1.285 1.56-2.068c.173-.972-.044-1.579-.364-2.001a2 2 0 0 0-.116-.14a5.3 5.3 0 0 1-.623 1.382c-1.514 2.3-4.369 2.46-6.203 1.728c-1.091-.435-1.972-1.583-2.247-2.788a3.5 3.5 0 0 1 .168-2.147c.312-.75.884-1.37 1.662-1.828c.8-.472 1.927-.665 2.979-.694a11 11 0 0 1 1.254.04c-.09-.2-.187-.343-.274-.425c-.384-.357-1.06-.632-1.746-.628c-.647.005-1.126.247-1.41.7a1.5 1.5 0 1 1-2.544-1.59c.948-1.515 2.507-2.1 3.933-2.11c1.388-.01 2.821.512 3.81 1.432c.954.888 1.373 2.254 1.513 3.485c.836.403 1.63.974 2.234 1.77c.874 1.15 1.233 2.624.927 4.34c-.32 1.793-1.45 3.178-2.94 4.096c-1.457.898-3.239 1.376-5.287 1.376c-2.899 0-5.28-1.02-6.93-2.78c-1.636-1.746-2.445-4.1-2.445-6.595v-2.25c0-2.494.81-4.85 2.445-6.594Zm8.947 8.823a8 8 0 0 0-1.405-.09c-.86.024-1.384.188-1.537.279c-.305.18-.39.333-.417.398a.53.53 0 0 0-.011.327c.036.16.121.333.238.48a.8.8 0 0 0 .194.186q.008.006 0 .002c.985.393 2.105.14 2.586-.592c.137-.207.265-.553.352-.99"/></g></svg>                    
+					</a>
+					<a href="#" class="hover:text-cyan-400 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+					</a>
+					<a href="#" class="hover:text-cyan-400 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+					</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<a 
+	href="https://wa.me/59170000000" 
+	target="_blank" 
+	rel="noopener noreferrer"
+	class="fixed bottom-4   right-4 z-50 bg-slate-950 text-emerald-400 hover:text-white  rounded-full p-3  hover:scale-103 transition-transform"
+	>
+		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+	</a>
+	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>
