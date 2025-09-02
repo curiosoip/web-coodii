@@ -1,0 +1,125 @@
+---
+import { Image } from 'astro:assets';
+import better from '../assets/imgs/better.jpg';
+import can from '../assets/imgs/can.jpg';
+import did from '../assets/imgs/did.jpg';
+import should from '../assets/imgs/should.jpg';
+import eduar00 from '../assets/imgs/eduar00.jpg';
+import eduar01 from '../assets/imgs/eduar01.jpg';
+import eduar02 from '../assets/imgs/eduar02.jpg';
+import eduar03 from '../assets/imgs/eduar03.jpg';
+import eduar04 from '../assets/imgs/eduar04.jpg';
+import eduar05 from '../assets/imgs/eduar05.jpg';
+import knuckless from '../assets/imgs/knuckless.png';
+import sonic from '../assets/imgs/eduar05.jpg';
+import tails from '../assets/imgs/tails.png';
+import shadow from '../assets/imgs/shadow.png';
+import copo from '../assets/imgs/copo.jpg';
+import reno from '../assets/imgs/reno.jpg';
+---
+
+<div class="flex flex-col justify-center items-center w-full pb-8">
+  <div class="wrapper">
+    <div class="slider">
+      {[
+        { src: better, alt: "Imagen FC Better" },
+        { src: can, alt: "Imagen FC Can" },
+        { src: did, alt: "Imagen FC Did" },
+        { src: should, alt: "Imagen FC Should" },
+        { src: eduar00, alt: "Imagen Educacion 00" },
+        { src: eduar01, alt: "Imagen Educacion 01" },
+        { src: eduar02, alt: "Imagen Educacion 02" },
+        { src: eduar03, alt: "Imagen Educacion 03" },
+
+        { src: eduar04, alt: "Imagen Educacion 04" },
+        { src: eduar05, alt: "Imagen Educacion 05" },
+        { src: knuckless, alt: "Imagen Knuckless" },
+        { src: sonic, alt: "Imagen Sonic" },
+        { src: tails, alt: "Imagen Tails" },
+        { src: shadow, alt: "Imagen Shadow" },
+        { src: copo, alt: "Imagen Copo" },
+        { src: reno, alt: "Imagen Reno" },
+      ].map((img, index) => (
+        <div class={`item item${index + 1}`} >
+          <div class="text-overlay">
+            <Image 
+              src={img.src} 
+              alt={img.alt} 
+              class="img-item" 
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+.wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+.text-overlay {
+    width: 90px;
+    height: 160px; /* cuadrado fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+.img-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recorta manteniendo proporción */
+    border-radius: 0.75rem;
+}
+
+.item {
+    width: 90px;
+    position: absolute;
+    right: max(calc(90px * 16), 100%);
+    animation-name: scrollRight;
+    animation-duration: 60s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollRight {
+    to { right: -90px; }
+}
+
+.item1  { animation-delay: calc(60s / 16 * (16 - 1) * -1); }
+.item2  { animation-delay: calc(60s / 16 * (16 - 2) * -1); }
+.item3  { animation-delay: calc(60s / 16 * (16 - 3) * -1); }
+.item4  { animation-delay: calc(60s / 16 * (16 - 4) * -1); }
+.item5  { animation-delay: calc(60s / 16 * (16 - 5) * -1); }
+.item6  { animation-delay: calc(60s / 16 * (16 - 6) * -1); }
+.item7  { animation-delay: calc(60s / 16 * (16 - 7) * -1); }
+.item8  { animation-delay: calc(60s / 16 * (16 - 8) * -1); }
+.item9  { animation-delay: calc(60s / 16 * (16 - 9) * -1); }
+.item10 { animation-delay: calc(60s / 16 * (16 - 10) * -1); }
+.item11 { animation-delay: calc(60s / 16 * (16 - 11) * -1); }
+.item12 { animation-delay: calc(60s / 16 * (16 - 12) * -1); }
+.item13 { animation-delay: calc(60s / 16 * (16 - 13) * -1); }
+.item14 { animation-delay: calc(60s / 16 * (16 - 14) * -1); }
+.item15 { animation-delay: calc(60s / 16 * (16 - 15) * -1); }
+.item16 { animation-delay: calc(60s / 16 * (16 - 16) * -1); }
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+</style>

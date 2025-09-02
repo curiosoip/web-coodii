@@ -5,6 +5,9 @@ import SliderComponet from "../components/SliderComponet.astro";
 const informacionGeneral = encodeURIComponent("Hola, me interesa su servicio.");
 
 import NavbarComponent from "../components/NavbarComponent.vue";
+
+import SliderLeftImages from "../components/SliderLeftImages.astro";
+import SliderRightImages from "../components/SliderRightImages.astro";
 ---
 
 <!DOCTYPE html>
@@ -67,7 +70,7 @@ import NavbarComponent from "../components/NavbarComponent.vue";
                 </div>
                 <div class="text-center">
                     <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
-                        5+
+                        8+
                     </div>
                     <p class="text-slate-400 font-medium">Años Experiencia</p>
                 </div>
@@ -310,6 +313,30 @@ import NavbarComponent from "../components/NavbarComponent.vue";
                 </div>
                
             </div>
+        </div>
+    </section>
+	 <section id="portafolio" class="pb-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="text-center flex flex-col justify-center items-center gap-2">
+                <div class="flex gap-2 items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm border border-slate-500/30 rounded-full text-slate-400 text-sm font-medium ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" fill-rule="evenodd" d="m85.333 160.617l128-74l.043.025L256 62l-42.667-24.666L42.667 136v197.333L85.333 358zm87.581 23.701l104.419-60.367l104.43 60.373l-104.419 60.368zm-23.581 35.651V346.05L256 407.716v-126.08zm256 126.081l-106.667 61.666V281.649l106.667-61.667zm-128-271.383L448 173.333v197.334l-170.667 98.667l-170.666-98.667V173.333z" clip-rule="evenodd"/></svg>
+                    Experiencias previas
+                </div>
+                <h2 class="text-4xl flex flex-col md:flex-row md:h-18 w-full justify-center items-center gap-2 md:text-6xl font-bold  text-white">
+                    Proyectos
+                    <span class="bg-gradient-to-r h-12 md:h-auto from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent block">
+                        Realizados
+                    </span>
+                </h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                    Algunos proyectos que reflejan nuestra experiencia.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-1 w-full justify-center items-center">
+				<SliderLeftImages/>
+				<SliderRightImages/>
+			</div>
         </div>
     </section>
 

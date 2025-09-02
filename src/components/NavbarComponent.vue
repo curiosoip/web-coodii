@@ -34,6 +34,10 @@ function scrollToSection(id) {
                     class="text-slate-300 hover:text-cyan-400 cursor-pointer  transition-all duration-300 font-medium hover:scale-105">
                     Nosotros
                 </button>
+                <button @click="scrollToSection('portafolio')"
+                    class="text-slate-300 hover:text-cyan-400 cursor-pointer  transition-all duration-300 font-medium hover:scale-105">
+                    Portafolio
+                </button>
                 <button @click="scrollToSection('contacto')"
                     class="text-slate-300 hover:text-cyan-400 cursor-pointer  transition-all duration-300 font-medium hover:scale-105">
                     Contacto

@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets';
+import orientealbum from '../assets/imgs/orientealbum.jpg';
+import bloomingalbum from '../assets/imgs/bloomingalbum.jpg';
+import vacamenu from '../assets/imgs/vacamenu.jpg';
+import fc from '../assets/imgs/fc.png';
+import vacaportada from '../assets/imgs/vacaportada.jpg';
+import diegoalmagroportada from '../assets/imgs/diegoalmagroportada.jpg';
+import bolivar from '../assets/imgs/bolivar.jpg';
+import bolivar2 from '../assets/imgs/bolivar2.jpg';
+---
+
+<div class="flex flex-col justify-center items-center w-full py-8">
+  <div class="wrapper">
+    <div class="slider">
+      {[
+        { src: bloomingalbum, alt: "Imagen Blooming Album" },
+        { src: orientealbum, alt: "Imagen Oriente Album" },
+        { src: vacamenu, alt: "Imagen La Vaca Menu" },
+        { src: fc, alt: "Imagen fc" },
+        { src: vacaportada, alt: "Imagen La Vaca Portada" },
+        { src: diegoalmagroportada, alt: "Imagen diego almagro" },
+        { src: bolivar, alt: "Imagen bolivar" },
+        { src: bolivar2, alt: "Imagen bolivar2" }
+      ].map((img, index) => (
+        <div class={`item item${index + 1}`} >
+          <div class="text-overlay text-purple-500 text-xl bg-slate-950/20 rounded-xl flex justify-center items-center">
+            <Image 
+              src={img.src} 
+              alt={img.alt} 
+              class="w-full h-30 object-cover rounded-xl" 
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+.wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 140px; /* Altura uniforme para todas las imágenes */
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+.text-overlay {
+    width: 200px; /* ancho fijo de cada item */
+    height: 100%; /* altura completa del wrapper */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.item {
+    width: 200px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollLeft {
+    to { left: -200px; }
+}
+
+/* Delays automáticos por item */
+.item1 { animation-delay: calc(30s / 8 * (8 - 1) * -1); }
+.item2 { animation-delay: calc(30s / 8 * (8 - 2) * -1); }
+.item3 { animation-delay: calc(30s / 8 * (8 - 3) * -1); }
+.item4 { animation-delay: calc(30s / 8 * (8 - 4) * -1); }
+.item5 { animation-delay: calc(30s / 8 * (8 - 5) * -1); }
+.item6 { animation-delay: calc(30s / 8 * (8 - 6) * -1); }
+.item7 { animation-delay: calc(30s / 8 * (8 - 7) * -1); }
+.item8 { animation-delay: calc(30s / 8 * (8 - 8) * -1); }
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+</style>
